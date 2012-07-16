@@ -3,15 +3,16 @@
 
 using namespace std;
 
-user::user(std::string name,int num,time_t t):
-			sUserName(name),iUserNum(num),paswd(num),mytime(t)
+user::user(std::string name,int num):
+			sUserName(name),iUserNum(num),paswd(num)
 {
 	++iNum;
 }
 
 
-user::user(string name):mytime(),paswd(++iNum)
+user::user(string name,string pasword):paswd(pasword)
 {
+	++iNum;
 	iUserNum = iNum;
 	sUserName = name;
 }

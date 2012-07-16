@@ -7,11 +7,11 @@
 #include "mytime.h"
 #include "code.h"
 
-class user:public mytime,public paswd
+class user:public paswd
 {
 public:
-	user(std::string);
-	user(std::string,int,time_t);
+	user(std::string,std::string);
+	user(std::string,int);
 	virtual int display();
 	virtual int getGrade();
 private:
