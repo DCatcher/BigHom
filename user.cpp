@@ -3,27 +3,23 @@
 
 using namespace std;
 
-user::user(std::string name,int num):
-			sUserName(name),iUserNum(num),paswd(num)
+class course;
+
+extern vector<user*> AllUsers;
+extern vector<course*> AllCourses;
+
+user::user(std::string name,int num)
+:sUserName(name),iUserNum(num),paswd(num)
 {
 	++iNum;
+	AllUsers.push_back(this);
 }
 
 
 user::user(string name,string pasword):paswd(pasword)
 {
-	++iNum;
-	iUserNum = iNum;
+	
+	iUserNum = ++iNum;
 	sUserName = name;
-}
-
-int user::display()
-{
-	cout << "用户名为：" << sUserName << endl;
-	return 0;
-}
-
-int user::getGrade()
-{
-	return 0;
+	AllUsers.push_back(this);
 }

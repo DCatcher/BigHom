@@ -1,17 +1,18 @@
 #ifndef MYTIME_H
 #define MYTIME_H
 
+#include <ctime>
+
 class mytime
 {
 public:
-
+	mytime();
+	mytime(time_t);
 	int showYear();
 	int showMonth();
 	int showDay();
 	int showAll();
 	int showWeek();
-	mytime();
-	mytime(time_t);
 
 private:
 	time_t timeNow;
